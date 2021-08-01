@@ -4,7 +4,6 @@ from RoundRobin.routers import UserRouter, CompanyRouter
 
 app = FastAPI()
 
-
 app.include_router(
     UserRouter.router,
     prefix="/user",
