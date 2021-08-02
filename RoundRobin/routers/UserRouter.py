@@ -11,8 +11,11 @@ async def read_users(name: Optional[str]=None, email: Optional[str]=None):
     data = await GetUsersDetails(name,email )
     #print(data)
     servername=os.getenv('APP_SERVER')
-    print(servername)
-    return data
+    resp = {
+        "server":servername, 
+        "total_users":len(data)
+    }
+    return resp
 
 
 
