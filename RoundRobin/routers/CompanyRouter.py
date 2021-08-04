@@ -1,4 +1,5 @@
 import os
+import time
 from typing import Optional
 from fastapi import APIRouter
 from ..controller import GetUsersDetails,GetCompanyUserDetails
@@ -14,4 +15,5 @@ async def read_users(name: Optional[str]=None):
         "server":servername, 
         "total_company":len(data)
     }
+    time.sleep(os.getenv('APP_SLEEP'))
     return resp
