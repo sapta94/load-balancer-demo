@@ -15,5 +15,5 @@ async def read_users(name: Optional[str]=None):
         "server":servername, 
         "total_company":len(data)
     }
-    time.sleep(os.getenv('APP_SLEEP'))
+    time.sleep(int(os.getenv('APP_SLEEP')))
     return resp

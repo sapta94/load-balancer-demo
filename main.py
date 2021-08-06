@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI
-from RoundRobin.routers import UserRouter, CompanyRouter
+from TrafficBased.routers import UserRouter, CompanyRouter
 
 app = FastAPI()
 
