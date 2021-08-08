@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI
-from TrafficBased.routers import UserRouter, CompanyRouter
+from PathBased.routers import UserRouter, CompanyRouter
 
 app = FastAPI()
 
