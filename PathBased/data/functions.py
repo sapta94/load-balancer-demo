@@ -29,6 +29,18 @@ async def GetCompanyEmployeeData(name=None):
         return results.get(name)
     else:
         return results
+
+async def GetPaymentsData(email=None):
+    results = []
+    paymentsData = dataset.GeneratePaymentsData()
+
+    for item in paymentsData:
+        if email and item['email']==email:
+            results.append(item)
+        elif not email:
+            results.append(item)
+
+    return results
     
         
             
