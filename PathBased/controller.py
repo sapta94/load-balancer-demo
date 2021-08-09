@@ -7,3 +7,7 @@ async def GetUsersDetails(name=None,email=None):
 async def GetCompanyUserDetails(name=None):
     data = await functions.GetCompanyEmployeeData(name)
     return data
+
+async def GetUserPaymentsData(email=None):
+    data = await functions.GetPaymentsData(email)
+    return data
