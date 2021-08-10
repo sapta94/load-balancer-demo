@@ -12,7 +12,7 @@ async def read_users(email: Optional[str]=None):
     servername=os.getenv('APP_SERVER')
     resp = {
         "server":servername, 
-        "payments":len(data)
+        "payments":data
     }
     
     return resp
